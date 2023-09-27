@@ -8,7 +8,7 @@ class InferlessPythonModel:
 
     # Implement the Load function here for the model
     def initialize(self):
-        self.generator = pipeline("text-generation", model="EleutherAI/gpt-neo-125M",device=0)
+        self.generator = pipeline("text-generation", model="EleutherAI/gpt-neo-125M",device=0, cache_dir='/var/nfs-mount/new-vol')
         print("This is Initialize Function", flush=True)
 
     
